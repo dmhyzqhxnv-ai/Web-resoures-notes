@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+
+<Trainers>
+<Trainer>
+<Name> Dana </Name>
+<Email> danadj@gmail.com</Email>
+<Cours> SD </Cours>
+</Trainer>
+
+<Trainer>
+<Name> jana </Name>
+<Email> janff@gmail.com</Email>
+<Cours> GG </Cours>
+</Trainer>
+
+<Trainer>
+<Name> Atheer </Name>
+<Email> Atherro@gmail.com</Email>
+<Cours> IT </Cours>
+</Trainer>
+</Trainers>
+</body>
+  </html>
+</xsl:template>
+
+</xsl:stylesheet>
