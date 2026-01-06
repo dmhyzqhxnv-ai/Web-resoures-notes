@@ -1,0 +1,10 @@
+<?php
+$index=$_POST['index'];
+
+$xml=new DOMDocument();
+$xml->load('taskD.xml');
+
+$trainers=$xml->getElementsByTagName('trainer');
+$trainers->item($index)->parentNode->removeChild($trainers->item($index));
+$xml->save('taskD.xml');
+?>
