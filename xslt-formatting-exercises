@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+<html>
+<body>
+
+<h2>Trainer</h2>
+
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Course</th>
+  </tr>
+
+  <xsl:for-each select="Trainers/Trainer">
+    <tr>
+      <td><xsl:value-of select="Name"/></td>
+      <td><xsl:value-of select="Email"/></td>
+      <td><xsl:value-of select="Course"/></td>
+
+      <td>
+        <form method="post" action="delet.php">
+          <input type="hidden" name="index" value="{position()-1}"/>
+          <input type="submit" value="Delete"/>
+        </form>
+      </td>
+    </tr>
+  </xsl:for-each>
+
+</table>
+
+<br/>
+
+<h3>Add New Trainers</h3>
+
+<form method="post" action="insert.php">
+  Name: <input type="text" name="name" placeholder="Enter name"/><br/><br/>
+  Email: <input type="text" name="email" placeholder="Enter email"/><br/><br/>
+  Course: <input type="text" name="course" placeholder="Enter course"/><br/><br/>
+  <input type="submit" value="Insert"/>
+</form>
+
+</body>
+</html>
+</xsl:template>
+
+</xsl:stylesheet>
